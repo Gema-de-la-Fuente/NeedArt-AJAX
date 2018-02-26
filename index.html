@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NeddArt!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+        <link href="css/scroll.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+        <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css"/>
+        <!------barra buscar------>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+    </head>
+
+    <body style="background-color: #FEF0F0">
+        
+
+        <!------MENU NAVEGACION------>
+        <nav class="navbar navbar-expand-lg navbar-light" style="border-bottom: 4px solid #FF7878; background-color: white;">
+            <a class="navbar-brand" href="index.html"><img alt="logo.png" src="img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul></ul>
+                    <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" id="buscador" placeholder="Search" style="border-radius: 20px;">
+                        <ul class="list-group" id="result"></ul>
+            </div>
+                    <!--<script>     
+//        $(document).ready(function(){
+//         $.ajaxSetup({ cache: false });
+//         $('#search').keyup(function(){
+//          $('#result').html('');
+//          $('#state').val('');
+//          var searchField = $('#search').val();
+//          var expression = new RegExp(searchField, "i");
+//          var datos = -;
+//          $.each(datos, function(key, value){
+//           if (value.tituloObra.search(expression) != -1 || value.autor.search(expression) != -1)
+//           {
+//            $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.tituloObra+' | <span class="text-muted">'+value.autor+'</span></li>');
+//           }
+//          });
+//         });
+//
+//         $('#result').on('click', 'li', function() {
+//          var click_text = $(this).text().split('|');
+//          $('#search').val($.trim(click_text[0]));
+//          $("#result").html('');
+//         }); 
+//        });
+    </script>-->
+                
+                <ul></ul>
+                <ul></ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link enlace" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle enlace" href="error/error404.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PINTURA
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="error/error404.html">ARTISTAS</a>
+                            <a class="dropdown-item" href="error/error404.html">OBRAS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle enlace" href="error/error404.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            FOTOGRAFIA
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="error/error404.html">ARTISTAS</a>
+                            <a class="dropdown-item" href="error/error404.html">OBRAS</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul></ul>
+                <ul></ul>
+                <ul></ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/login.html"><img style="width: 40px" src="img/ic_account_circle_black_24px.svg" alt="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="error/error404.html"><img style="width: 40px" src="img/ic_shopping_cart_black_24px.svg" alt="cart">Shop</a>
+                    </li>
+                    <li class="nav-item" id="logoutB">
+                        <a class="nav-link"  onclick="logoutSesion()" href="#"><img style="width: 35px" src="img/logout.svg" alt="logout.svg">Logout</a>
+                       
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+          </ol>
+            
+        </nav>
+
+        <!------CARRUSEL------>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center" style="margin-top: 8%">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:70%; height: 30%;"> 
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/ojos.jpg" alt="ojos">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/dosgatos.jpg" alt="dosgatos">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/manos.jpg" alt="manos">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/nina.jpg" alt="nina">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/pajaro.jpg" alt="pajaro">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <!------CUERPO DE LA PÁGINA------>
+
+            <!------FOTOGRAFÍA------>
+            <div class="row d-flex justify-content-center titulosF animation-element slide-left testimonial">
+                <p>NOVEDADES EN FOTOGRAFIA</p>
+            </div>
+
+            <div class="row d-flex justify-content-around fotografia scrollflow -slide-top -opacity">
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="london.jpg" src="img/london.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>London</h2>
+                        <p>VirSnchez</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;" >
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon"></button>
+                                <div style="display:inline-block" id="contCorazon"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella"></button>
+                                <div style="display:inline-block" id="contEstrella"></div>
+                                <a class="comment icon" id="comentario" href="html/detalleLondon.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleLondon.html" class="info">Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="libros.jpg" src="img/libros.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Libros</h2>
+                        <p>VirSnchez</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon2"></button>
+                                <div style="display:inline-block" id="contCorazon2"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella2"></button>
+                                <div style="display:inline-block" id="contEstrella2"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleLibros.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleLibros.html" class="info">Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="gato.jpg" src="img/gato.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Gato</h2>
+                        <p>VirSnchez</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon3"></button>
+                                <div style="display:inline-block" id="contCorazon3"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella3"></button>
+                                <div style="display:inline-block" id="contEstrella3"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleGatoFoto.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleGatoFoto.html" class="info">Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="estrella.jpg" src="img/estrella.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Estrella de mar</h2>
+                        <p>VirSnchez</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon4"></button>
+                                <div style="display:inline-block" id="contCorazon4"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella4"></button>
+                                <div style="display:inline-block" id="contEstrella4"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleEstrella.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleEstrella.html" class="info">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <!------VER MÁS------>
+            <div class="row vermas d-flex justify-content-center">
+                <p class="scrollflow -slide-left -opacity">VER MÁS<a href="error/error404.html"><img alt="flecha.png" src="img/flecha.png"/></a></p>
+            </div>
+            <!------PINTURA------>
+            <div class="row d-flex justify-content-center titulosP animation-element slide-left testimonial">
+                <p>NOVEDADES EN PINTURA</p>
+            </div>
+
+            <div class="row d-flex justify-content-around fotografia scrollflow -slide-top -opacity">
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="assassins.jpg" src="img/assassins.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Assassins Creed</h2>
+                        <p>JavierYayo</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon5"></button>
+                                <div style="display:inline-block" id="contCorazon5"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella5"></button>
+                                <div style="display:inline-block" id="contEstrella5"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleAssanssins.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleAssanssins.html" class="info">Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="gato2.jpg" src="img/gato2.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Gato</h2>
+                        <p>JavierYayo</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon6"></button>
+                                <div style="display:inline-block" id="contCorazon6"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella6"></button>
+                                <div style="display:inline-block" id="contEstrella6"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleGatoDibujo.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleGatoDibujo.html" class="info">Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="mujer.jpg" src="img/mujer.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Mujer</h2>
+                        <p>JavierYayo</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon7"></button>
+                                <div style="display:inline-block" id="contCorazon7"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella7"></button>
+                                <div style="display:inline-block" id="contEstrella7"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleMujer.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleMujer.html" class="info">Detalles</a>
+                    </div>
+                </div>
+
+                <div class="card vistaPrin piedefoto" style="width: auto; height: auto;">
+                    <img class="img-fluid max-width: 100%; height: 20rem;" alt="mickey.jpg" src="img/mickey.jpg">
+                    <div class="vistaAnimacion">
+                        <h2>Mickey &amp; Minnie</h2>
+                        <p>JavierYayo</p>
+                        <div class="btn-click">
+                            <div style="margin-bottom:20px;">
+                                <button class="btn btn-7 btn-7e btn-icon-only icon-heart" id="corazon8"></button>
+                                <div style="display:inline-block" id="contCorazon8"></div>
+                                <button class="btn btn-7 btn-7f btn-icon-only icon-star" id="estrella8"></button>
+                                <div style="display:inline-block" id="contEstrella8"></div>
+                                <a class="comment icon" title="Comment" href="html/detalleMickey.html"></a>
+                                <div class="cometario" style="display:inline-block">2</div>
+                            </div>
+                        </div>
+                        <a href="html/detalleMickey.html" class="info">Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <!------VER MÁS------>
+            <div class="row vermas d-flex justify-content-center">
+                <p class="scrollflow -slide-left -opacity">VER MÁS<a href="error/error404.html"><img alt="flecha.png" src="img/flecha.png"/></a></p>
+            </div>
+            <!------BOTON IMPRIMIR------>
+            <div class="row d-flex justify-content">
+                <div class="imprimir col-2" onclick="window.print();">
+                    <img src="img/impresora.svg" alt="impresora"/>
+                </div>
+            </div>
+            <!------FOOTER------>
+            <footer class="row footer d-flex justify-content-between">
+                <div class="links flex-column flex-sm-column flex-md-row flex-lg-row">
+                    <div><a style="color: #FF7878" href="#">NeedArt! </a></div>
+                    <div><a style="color: #FF7878" href="#"> Contacto </a></div>
+                    <div><a style="color: #FF7878" href="#"> Aviso Legal </a></div>
+                    <div><a style="color: #FF7878" href="#"> Privacidad </a></div>
+                    <div><a style="color: #FF7878" href="#"> Condiciones </a></div>
+                    <div><a style="color: #FF7878;" href="#"> Derechos de Uso</a></div>
+                </div>
+                <div class="RRSS">
+                    <div><a href="#"><img alt="if_pinterest.png" src="img/if_pinterest_246004.png"></a></div>
+                    <div><a href="#"><img alt="if_paypal.png" src="img/if_paypal_456097.png"></a></div>
+                    <div><a href="#"><img alt="if_Popular_Social_Media.png" src="img/if_Popular_Social_Media-08_2329265.png"></a></div>
+                    <div><a href="#"><img alt="f_twitter.png" src="img/if_twitter_246011.png"></a></div>
+                    <div><a href="#"><img alt="if_Facebook.png" src="img/if_Facebook-2_174200.png"></a></div>
+                    <div><a href="#"><img alt="if_map-marker.png" src="img/if_map-marker_285659.png"></a></div>
+                </div>
+            </footer>
+            <!------MENSAJE DE COOKIES------>
+
+            <div class="row cookies" id="barraaceptacion" style="display: block;">
+                <div class="inner">
+                    Las cookies nos permiten ofrecer nuestros servicios. Al utilizar nuestros servicios, aceptas el uso que hacemos de las cookies.
+                    <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>Aceptar</b></a> | 
+                    <a href="http://politicadecookies.com" target="_blank" class="info">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!------LIBRERIAS Y JS------>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="js/jquery-3.1.0.min.js"></script>
+        <script src="js/busqueda.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/dom.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/scroll.js"></script>
+        <script src="js/eskju.jquery.scrollflow.min.js" ></script>
+        <script src="js/classie.js"></script>
+        <!------BOOTSTRAP------>
+        
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!------MENU funciona------>
+<!--
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
+        
+    </body>
+</html>

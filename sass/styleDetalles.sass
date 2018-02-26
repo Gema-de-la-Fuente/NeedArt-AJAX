@@ -1,0 +1,488 @@
+/* Mixins
+
+*
+  font-family: "Verdana"
+
+/* Links
+
+.enlace
+  text-decoration: none
+  color: black
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 0
+    height: 4px
+    width: 0
+    background-color: #FF7878
+    animation: width 0.5s
+    transition: all 0.4s
+    border-radius: 2px
+  &:hover:before
+    width: 100%
+
+.links a
+  &:link
+    color: #FF7878
+  &:hover
+    color: #FEF0F0
+    font-weight: bold
+
+/* HEADER
+
+.header
+  position: fixed
+  margin: 5px
+  height: 14.2%
+  background-color: white
+  border-bottom: 4px solid #FF7878
+  z-index: 1
+
+.buscar
+  margin-top: 30%
+
+.nav
+  margin-top: 5%
+  > ul > li
+    float: left
+    a
+      display: inline-block
+      text-align: center
+      line-height: 50px
+      text-align: center
+      background-color: white
+      width: 100px
+      text-decoration: none
+      color: black
+    > ul
+      display: none
+      > li
+        position: relative
+        > ul
+          position: absolute
+          left: 100px
+          top: 0
+          display: none
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+.logo img
+  width: 70%
+  height: 70%
+
+.log img
+  margin-top: 45%
+  width: 70%
+
+.carrito img
+  margin-top: 45%
+  width: 65%
+
+/* CUERPO PÁGINA
+
+.section
+  background: #FEF0F0
+
+.titulo
+  margin-top: 13%
+  margin-left: 5%
+
+.detalles
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-around
+  margin-bottom: 10%
+  img
+    width: 250px
+    height: 300px
+
+.textoDetalles img
+  width: 25px
+  height: 25px
+
+/* FOOTER
+
+.footer
+  background-color: #333333
+  width: 100%
+  .RRSS, .links
+    margin-top: 15px
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-around
+    align-items: center
+    margin-bottom: 15px
+    width: 100%
+
+/*BOTON CARRITO
+@font-face
+  font-family: 'icomoon'
+  src: url('../fonts/icomoon/icomoon.eot')
+  src: url('../fonts/icomoon/icomoon.eot?#iefix') format("embedded-opentype"), url('../fonts/icomoon/icomoon.woff') format("woff"), url('../fonts/icomoon/icomoon.ttf') format("truetype"), url('../fonts/icomoon/icomoon.svg#icomoon') format("svg")
+  font-weight: normal
+  font-style: normal
+
+
+/* General button style (reset)
+
+.btn
+  border: none
+  font-family: inherit
+  font-size: inherit
+  color: inherit
+  background: none
+  cursor: pointer
+  padding: 15px 15px
+  display: inline-block
+  margin: 10px 10px
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-weight: 700
+  outline: none
+  position: relative
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  transition: all 0.3s
+  &:after
+    content: ''
+    position: absolute
+    z-index: -1
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+  &:before
+    font-family: 'icomoon'
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    position: relative
+    -webkit-font-smoothing: antialiased
+
+/* Pseudo elements for icons
+
+.icon-heart:after, .icon-star:after, .icon-plus:after, .icon-file:before
+  font-family: 'icomoon'
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  position: relative
+  -webkit-font-smoothing: antialiased
+
+.icon-cart:before
+  content: "\e007"
+
+.icon-cart-2:before
+  content: "\e008"
+
+.btn-5
+  background: #ff7878
+  color: #fff
+  height: 40px
+  min-width: 80px
+  line-height: 24px
+  font-size: 11px
+  overflow: hidden
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  backface-visibility: hidden
+  &:active
+    background: #9053a9
+    top: 2px
+  span
+    display: inline-block
+    width: 100%
+    height: 100%
+    -webkit-transition: all 0.3s
+    -webkit-backface-visibility: hidden
+    -moz-transition: all 0.3s
+    -moz-backface-visibility: hidden
+    transition: all 0.3s
+    backface-visibility: hidden
+  &:before
+    position: absolute
+    height: 100%
+    width: 100%
+    line-height: 2.5
+    font-size: 170%
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+  &:active:before
+    color: #703b87
+
+.btn-5b
+  &:hover span
+    -webkit-transform: translateX(200%)
+    -moz-transform: translateX(200%)
+    -ms-transform: translateX(200%)
+    transform: translateX(200%)
+  &:before
+    left: -100%
+    top: 0
+  &:hover:before
+    left: 0
+
+/*BOTON REDES SOCIALES
+
+.container-icons
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: sans-serif
+  bottom: 10px
+  right: 10px
+  z-index: 500
+
+.icon-circle-with-plus
+  font-size: 50px
+  transition: all 300ms
+  color: #ff7878
+
+.row-icon
+  position: absolute
+  display: flex
+  justify-content: flex-end
+  transition: all 300ms
+  opacity: 1
+  padding: 5px
+
+.container-icons:hover .row-icon
+  opacity: 1
+
+.row-icon
+  h8
+    transform: translate(-10px, 10px)
+    background: rgba(0, 0, 0, 0.6)
+    height: 20px
+    font-weight: 300
+    padding: 2px 2px
+    color: white
+    border-radius: 5px
+  label
+    font-size: 40px
+
+.icon1
+  transform: translate(-100px, -40px) scale(0)
+
+.icon2
+  transform: translate(-0px, -90px) scale(0)
+
+.icon3
+  transform: translate(-96px, -180px) scale(0)
+
+.icon4
+  transform: translate(-10px, -250px) scale(0)
+
+.container-icons:hover
+  .icon1
+    transform: translate(-66px, -50px) scale(1)
+  .icon2
+    transform: translate(-56px, -100px) scale(1)
+  .icon3
+    transform: translate(-70px, -150px) scale(1)
+  .icon4
+    transform: translate(-46px, -200px) scale(1)
+
+.label1
+  color: #4862A3
+
+.label2
+  color: #AB3838
+
+.label3
+  color: #D32681
+
+.label4
+  color: #1DA0F2
+
+/*BOTON FAV Y LIKE
+
+.btnFAV
+  border: none
+  cursor: pointer
+  outline: none
+  position: relative
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  transition: all 0.3s
+  &:after
+    position: absolute
+    z-index: -1
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+  &:before
+    font-family: 'icomoon'
+    speak: none
+    font-style: normal
+    font-weight: normal
+
+/* Pseudo elements for icons
+
+.icon-heartFAV:after, .icon-starFAV:after, .icon-fileFAV:before
+  font-family: 'icomoon'
+  speak: none
+  font-style: normal
+  font-weight: normal
+
+.icon-heartFAV
+  &:before
+    content: "\e009"
+  &:after
+    content: "\e00a"
+
+/* Filled heart
+
+.icon-heart-2FAV:before
+  content: "\e00a"
+
+.icon-starFAV
+  &:before
+    content: "\e00b"
+  &:after
+    content: "\e00c"
+
+/* Filled star
+
+.icon-star-2FAV:before
+  content: "\e00c"
+
+/* Button 7
+
+.btn-7FAV
+  background-color: rgba(0, 0, 0, 0.1)
+  color: #fff
+  border-radius: 7px
+
+/* Icon only style
+
+.btn-icon-onlyFAV
+  font-size: 0
+  padding: 15px 20px
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 50%
+    font-size: 30px
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+
+/* Button 7e
+
+.btn-7eFAV
+  &:after
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: 1
+    font-size: 30px
+    color: #ea515e
+    -webkit-transform: scale(0)
+    -moz-transform: scale(0)
+    -ms-transform: scale(0)
+    transform: scale(0)
+    opacity: 0
+    -webkit-transition: none
+    -moz-transition: none
+    transition: none
+  &.btn-activatedFAV:after
+    -webkit-animation: scaleFade 0.5s forwards
+    -moz-animation: scaleFade 0.5s forwards
+    animation: scaleFade 0.5s forwards
+
+@-webkit-keyframes scaleFade
+  50%
+    opacity: 1
+    -webkit-transform: scale(1)
+
+  100%
+    opacity: 0
+    -webkit-transform: scale(2.5)
+
+
+@-moz-keyframes scaleFade
+  50%
+    opacity: 1
+    -moz-transform: scale(1)
+
+  100%
+    opacity: 0
+    -moz-transform: scale(2.5)
+
+
+@keyframes scaleFade
+  50%
+    opacity: 1
+    transform: scale(1)
+
+  100%
+    opacity: 0
+    transform: scale(2.5)
+
+
+/* Button 7f
+
+.btn-7fFAV
+  &:before
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #fff
+  &:after
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: 1
+    font-size: 30px
+    color: #ffe44d
+    visibility: hidden
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: #ffe44d
+    -webkit-transform: scale(4)
+    -moz-transform: scale(4)
+    -ms-transform: scale(4)
+    transform: scale(4)
+    opacity: 0
+    -webkit-transition: none
+    -moz-transition: none
+    transition: none
+  &.btn-activatedFAV:after
+    visibility: visible
+    -webkit-animation: dropDown 0.3s forwards
+    -moz-animation: dropDown 0.3s forwards
+    animation: dropDown 0.3s forwards
+
+@-webkit-keyframes dropDown
+  to
+    opacity: 1
+    -webkit-transform: scale(1)
+
+
+@-moz-keyframes dropDown
+  to
+    opacity: 1
+    -moz-transform: scale(1)
+
+
+@keyframes dropDown
+  to
+    opacity: 1
+    transform: scale(1)
