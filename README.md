@@ -6,7 +6,9 @@ Para poder realizar las búsquedas en local utilizaremos el servidor JSON SERVER
 Para poder utilizar este servidor primero hay que instalar el node.js. Una vez instalado se instala el servidor.
 ![instalacion JSON SERVER](/img/imgREADME/instalarJSONSERVER.PNG)
 Una vez instalado para poder cargar el json, nos situamos en la carpeta donde está y abrimos una consola de comandos. Con el comando json-server --watch nombre_json.json.
+
 ![cargar json](/img/imgREADME/jsonBUSQUEDA.PNG)
+
 ![cargar json](/img/imgREADME/jsonBUSQUEDA.PNG)
 
 ## Caja de búsqueda:
