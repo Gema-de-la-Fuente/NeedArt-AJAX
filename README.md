@@ -22,7 +22,7 @@ Cuando se carga window se llama a la función listaPaises();
 Esta función comprueba el tipo de navegador (en nuestro caso moderno) y abre el archivo del tipo JSON y pone el estado en intercambio efectuado y transacción correcta. Si está todo correcto se enviada la petición y se crean los options con los valores de los países del JSON.
 ![caja de busqueda](/img/imgREADME/ejemploPaises.PNG)
 
-Para utilizar el servidor en remoto para que funcione en GitHub Pages el json server tiene las siguientes restricciones:
+## Para utilizar el servidor en remoto para que funcione en GitHub Pages el json server tiene las siguientes restricciones:
 * El json no debe tener más de 30 elementos, nuestro json de países tiene 199
 * Al unir nuestros json (obras y paises) en un solo, que es db.json, se suman 199 paises y 8 obras, superando el límite
 * No podemos separar en dos json, ya que solo puede haber un db.json en el proyecto.
